@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animation List -->
+    <div class="background">
+        <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- Main Container -->
+    <div class="login-container">
+        <h1>Sign Up</h1>
+        <form id="signup-form" class="signup-form">
+            <input type="text" id="signup-input-name" class="signup__input" placeholder="Full Name*" onkeyup="validateName()" required>
+            <span id="name-error"></span>
+            <input type="text" id="signup-input-user" class="signup__input" placeholder="Username*" required>
+            <input type="email" id="signup-input-email" class="signup__input" placeholder="Email*" onkeyup="validateEmail()" required>
+            <span id="email-error"></span>
+            <input type="password" id="signup-input-password" class="signup__input" placeholder="Password*" required>
+            <input type="password" id="signup-input-user" class="signup__input" placeholder="Confirm Password*" required>
+            <input type="number" id="signup-input-phone" class="signup__input" placeholder="Mobile*" onkeyup="validatePhone()" required>
+            <span id="phone-error"></span>
+            <button class="signup__submit">Create Account</button>
+            <span id="submit-error" onclick="validateForm()"></span>
+        </form>
+        <a href="#" id="loginLink" class="login">Login</a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
